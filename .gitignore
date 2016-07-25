@@ -1,0 +1,6 @@
+vendor/
+public/wordpress/
+wp-local-config.php
+public/wp-content/plugins/*/
+public/wp-content/themes/twentysixteen/
+public/wp-content/uploads/

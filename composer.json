@@ -1,0 +1,35 @@
+{
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "wordpress/wordpress-no-content",
+				"type": "wordpress-core",
+				"version": "4.5.3",
+				"dist": {
+					"type": "zip",
+					"url": "https://wordpress.org/wordpress-4.5.3-no-content.zip"
+				},
+				"require": {
+					"johnpbloch/wordpress-core-installer": "~0.2"
+				}
+			}
+		},
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"wordpress/wordpress-no-content": "4.5.3",
+		"wpackagist-theme/twentysixteen": "*"
+	},
+	"extra": {
+		"installer-paths": {
+			"public/wp-content/mu-plugins/{$name}/": [ "type:wordpress-muplugin" ],
+			"public/wp-content/plugins/{$name}/": [ "type:wordpress-plugin" ],
+			"public/wp-content/themes/{$name}/": [ "type:wordpress-theme" ]
+		},
+		"wordpress-install-dir": "public/wordpress"
+	}
+}
