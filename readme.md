@@ -32,4 +32,5 @@ In a production install, these rewrites would probably be better implemented as 
 ### Caveats
 
 * This setup has not yet been tested with multisite.
+* WordPress auto-updates are disabled in this setup. If you're not willing to take responsibility for managing your WordPress updates, this setup probably isn't what you want to be using.
 * In order to update WordPress, the WordPress version must be updated in three places in `composer.json`. The reason I am not installing WordPress from [johnpbloch/wordpress](https://github.com/johnpbloch/wordpress) is that I did not want the WordPress package in `/wordpress` to include the wp-content directory, since we're using a custom wp-content directory in `/wp-content`. Using a custom repository allows me to pull in the "no-content" ZIP file from the .org servers.
